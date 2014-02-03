@@ -1,0 +1,23 @@
+# © Timothy P. Hubbard
+# timothy.hubbard@colby.edu
+
+# driver file to approximate the asymmetric bid functions at
+# a first-price, sealed-bid auction with Chebyshev polynomials
+
+# load model and data files
+model fpsb_piecewise.md;
+data fpsb.dat;
+
+# specify solver and solver options
+option solver snopt;
+option snopt_options "outlev=1 feas_tol=1e-6";
+
+# solve the instance
+solve;
+display _ampl_time;
+display _total_solve_time;
+
+
+# print results to Matlab file
+printf {i in 0..d,j in 1..p} "a(%i,%i) = %.16f;\n", i+1, j, a[i,j] > fpsbsoln.m;
+printf "bhigh = %.16f;\n", bhigh > fpsbsoln.m;

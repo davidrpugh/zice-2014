@@ -22,7 +22,7 @@ let {t in retire..T} w[t] := (T - t) / (T - retire);
 param eps := 1e-3;
 
 # inverse elasticity of substitution for consumption
-param gamma := 2.5;   
+param gamma := 2.0;   
 
 # inverse elasticity of substitution for labor supply  
 param eta := 1.0;       
@@ -37,13 +37,13 @@ param AT := 0.0;
 param Amin := -10.0;     
 
 # tax on consumption
-param tau_c := 0.15;
+param tau_c := 0.0;
 
 # tax on labor supply
-param tau_l := 0.05;
+param tau_l := 0.0;
 
 # tax on capital
-param tau_A := -0.5;
+param tau_A := -0.75;
 
 ##### Declare variables #####
 
@@ -78,6 +78,10 @@ let c[T] := ((1 - tau_A) * R + tau_A) * A[T-1] + l[T] * w[T] - AT;
 
 solve;
 
-# display solutions
-display w, c, l, A > life_cycle_HW.out;
-close life_cycle_HW.out;
+# print output to file
+#printf: 
+
+printf {t in 1..T-1}: "%3i%12.4f%12.4f%12.4f%12.4f\n", t, w[t], c[t], l[t], A[t];
+printf: "%3i%12.4f%12.4f%12.4f%12.f4", T, w[T], c[T], l[T], AT;
+#> life_cycle_HW.out;
+#close life_cycle_HW.out;

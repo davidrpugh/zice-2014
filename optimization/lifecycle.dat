@@ -1,0 +1,10 @@
+
+param T := 100 ;
+param R := 65 ;
+param beta := 0.95 ;
+param theta := 2.0 ;
+param eta := 1.0 ;
+
+param r := 0.05 ;
+
+param minimum_assets := -5.0 ;
