@@ -6,36 +6,35 @@ model = pyomo.AbstractModel()
 
 ##### Define model parameters #####
 
-# define time horizon
-model.T = pyomo.Param(doc="Agent's time horizon", within=pyomo.NonNegativeIntegers)
+# time horizon
+model.T = pyomo.Param(doc="time horizon", within=pyomo.NonNegativeIntegers)
 model.periods = pyomo.RangeSet(0, model.T)
 
 # retirement age
-model.R = pyomo.Param(doc="Agent's retirement age", within=pyomo.NonNegativeIntegers)
+model.R = pyomo.Param(doc="retirement age", within=pyomo.NonNegativeIntegers)
 
-# define prices
-model.r = pyomo.Param(doc='Net interest rate', within=pyomo.NonNegativeReals)
+# net interest rate
+model.r = pyomo.Param(doc='interest rate', within=pyomo.NonNegativeReals)
 
+# wages
 def wage_schedule(model, t):
-    """Defines the path of wages. This should really go in the .dat file"""
+    """Defines the path of wages. This should really go in the .dat file?"""
     if t < model.R:
         wage = t / model.R
     else:
-        wage = (model.T - t) / (model.T - model.R)
+        wage = 0.0
     return wage
 
 model.w = pyomo.Param(model.periods, doc='Real wages', within=pyomo.NonNegativeReals,
                       initialize=wage_schedule)
 
 # define utilty parameters
-model.beta = pyomo.Param(doc='Discount factor', within=pyomo.NonNegativeReals)
-model.theta = pyomo.Param(doc='Inverse of inter-temporal elasticity of substitution for consumption',
+model.beta = pyomo.Param(doc='discount factor', within=pyomo.NonNegativeReals)
+model.theta = pyomo.Param(doc='inverse of elasticity of substitution for consumption',
                           within=pyomo.NonNegativeReals)
-model.eta = pyomo.Param(doc='Inverse of inter-temporal elasticity of substitution for labor',
-                        within=pyomo.NonNegativeReals)
 
 # define borrowing constraint
-model.minimum_assets = pyomo.Param(doc='Lower boundon agent assets.')
+model.minimum_assets = pyomo.Param(doc='lower bound on assets.')
 
 ##### Define model variables #####
 
@@ -47,57 +46,33 @@ def initial_consumption(model, t):
 model.consumption = pyomo.Var(model.periods, domain=pyomo.PositiveReals, 
                               initialize=initial_consumption)
 
-# declare labor supply variable
-def initial_labor_supply(model, t):
-    """Rule for initial choice of labor supply."""
-    return 1.0
-
-model.labor_supply = pyomo.Var(model.periods, domain=pyomo.PositiveReals, 
-                               initialize=initial_labor_supply)
-
 # declare assets variable
 def initial_assets(model, t):
-    """Rule for initializing assets."""
-    # extract variables
-    c = model.consumption
-    l = model.labor_supply
-    A = model.assets
+    """
+    Rule for initializing assets. Ideally this should be feasible given 
+    rules for initializing consumption variable.
     
-    # extract parameters
-    r = model.r
-    w = model.w
-    
-    #if t == 0:
-    #    assets = 0.0
-    #else:
-    #    assets = w[t] * l[t] + (1 + r) * A[t] - c[t]
-    
+    """          
     return 0.0
 
-model.assets = pyomo.Var(pyomo.RangeSet(0, model.T + 1), initialize=initial_assets)
+model.assets = pyomo.Var(pyomo.RangeSet(0, model.T+1), initialize=initial_assets)
 
 ##### define the objective function #####
 
-def flow_utility(model, c, l):
+def flow_utility(model, c):
     """Flow utility function for the agent."""    
     # agent likes to eat...
     utility_consumption = c**(1 - model.theta) / (1 - model.theta)
-        
-    # ...but hates working
-    disutility_labor = -l**(1 + model.eta) / (1 + model.eta)
-    
-    total_utility = utility_consumption + disutility_labor
-    
-    return total_utility
+            
+    return utility_consumption
 
 def lifetime_utility(model):
     """Abstract representation of our model objective.""" 
     # extract variables
     c = model.consumption
-    l = model.labor_supply
         
     # compute utility
-    U = sum(model.beta**t * flow_utility(model, c[t], l[t]) for t in model.periods)
+    U = sum(model.beta**t * flow_utility(model, c[t]) for t in model.periods)
     
     return U 
 
@@ -109,14 +84,13 @@ def flow_budget_constraints(model, t):
     """Agent faces a sequence of flow budget constraints"""
     # extract variables
     c = model.consumption
-    l = model.labor_supply
     A = model.assets
     
     # extract parameters
     r = model.r
     w = model.w
     
-    return c[t] + A[t+1] == w[t] * l[t] + (1 + r) * A[t]
+    return c[t] + A[t+1] == w[t] + (1 + r) * A[t]
     
 model.budget_constraints = pyomo.Constraint(model.periods, rule=flow_budget_constraints)
 
@@ -134,6 +108,6 @@ model.endowment = pyomo.Constraint(rule=endowment)
 
 def no_bequests(model):
     """Agent leaves no bequests."""
-    return model.assets[model.T + 1] == 0.0
+    return model.assets[model.T+1] == 0.0
 
 model.no_bequests = pyomo.Constraint(rule=no_bequests)

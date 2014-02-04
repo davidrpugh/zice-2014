@@ -1,10 +1,18 @@
 
+# time horizon
 param T := 100 ;
-param R := 65 ;
-param beta := 0.95 ;
-param theta := 2.0 ;
-param eta := 1.0 ;
 
+# retirement are
+param R := 65 ;
+
+# discount factor
+param beta := 0.95 ;
+    
+# inverse elasticity of substitution for consumption
+param theta := 2.0 ;
+
+# interest rate 
 param r := 0.05 ;
 
+# lower bound on asset holdings
 param minimum_assets := -5.0 ;
