@@ -1,0 +1,30 @@
+
+# time horizon
+param T := 100 ;
+
+# retirement age
+param R := 65 ;
+
+# discount factor
+param beta := 0.99 ;
+    
+# inverse elasticity of substitution for consumption
+param sigma := 2.0 ;
+
+# labor endowment
+param l_bar := 1.0 ;
+
+# capital endowment
+param initial_capital := 1.0 ;
+    
+# collateral parameter
+param theta := 0.1 ;
+    
+# interest rate 
+param r := 0.02 ;
+    
+# initial wage
+param w0 := 1.0 ;
+    
+# growth rate of wages
+param g := 0.0 ;

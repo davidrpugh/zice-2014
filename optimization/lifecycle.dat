@@ -5,6 +5,9 @@ param T := 100 ;
 # retirement are
 param R := 65 ;
 
+# labor endowment
+param l_bar := 1.0 ;
+    
 # discount factor
 param beta := 0.95 ;
     

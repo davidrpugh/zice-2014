@@ -1,0 +1,27 @@
+
+# time horizon
+param T := 100 ;
+
+# retirement age
+param R := 65 ;
+
+# discount factor
+param beta := 0.95 ;
+    
+# inverse elasticity of substitution for consumption
+param sigma := 2.0 ;
+
+# labor endowment
+param l_bar := 1.0 ;
+    
+# depreciation rate of physical capital
+param delta := 0.05 ;
+    
+# interest rate 
+param r := 0.05 ;
+    
+# initial wage
+param w0 := 1.0 ;
+    
+# growth rate of wages
+param g := 0.015 ;
