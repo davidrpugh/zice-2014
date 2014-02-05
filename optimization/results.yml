@@ -16,7 +16,7 @@ Problem:
 # ----------------------------------------------------------
 Solver: 
 - Status: ok
-  Message: KNITRO 9.0.0\x3a Locally optimal solution.; objective -78.91094392331769; feasibility error 1.67e-15; 8 iterations; 9 function evaluations
+  Message: KNITRO 9.0.0\x3a Locally optimal solution.; objective -1.3116882862006587; feasibility error 1.14e-13; 11 iterations; 12 function evaluations
   Termination condition: optimal
   Id: 0
   Error rc: 0
@@ -30,609 +30,609 @@ Solution:
   Objective: 
     lifetime_utility: 
       Id: 0
-      Value: -78.9109439233
+      Value: -1.3116882862
   Variable: 
     consumption[0]:
       Id: 0
-      Value: 0.246846518987
+      Value: 9.99987106045
     consumption[1]:
       Id: 1
-      Value: 0.24653776775
+      Value: 10.3000467043
     consumption[2]:
       Id: 2
-      Value: 0.246229402694
+      Value: 10.6090304203
     consumption[3]:
       Id: 3
-      Value: 0.245921423336
+      Value: 10.9273128937
     consumption[4]:
       Id: 4
-      Value: 0.245613829193
+      Value: 11.2550642048
     consumption[5]:
       Id: 5
-      Value: 0.245306619784
+      Value: 11.592671823
     consumption[6]:
       Id: 6
-      Value: 0.244999794627
+      Value: 11.9404534091
     consumption[7]:
       Id: 7
-      Value: 0.244693353242
+      Value: 12.2987218417
     consumption[8]:
       Id: 8
-      Value: 0.244387295149
+      Value: 12.6677426607
     consumption[9]:
       Id: 9
-      Value: 0.244081619868
+      Value: 13.0477900574
     consumption[10]:
       Id: 10
-      Value: 0.243776326921
+      Value: 13.4392024186
     consumption[11]:
       Id: 11
-      Value: 0.243471415829
+      Value: 13.8423535869
     consumption[12]:
       Id: 12
-      Value: 0.243166886115
+      Value: 14.2576073675
     consumption[13]:
       Id: 13
-      Value: 0.242862737303
+      Value: 14.685322037
     consumption[14]:
       Id: 14
-      Value: 0.242558968915
+      Value: 15.1258689627
     consumption[15]:
       Id: 15
-      Value: 0.242255580476
+      Value: 15.5796336864
     consumption[16]:
       Id: 16
-      Value: 0.241952571511
+      Value: 16.0470126879
     consumption[17]:
       Id: 17
-      Value: 0.241649941546
+      Value: 16.5284134238
     consumption[18]:
       Id: 18
-      Value: 0.241347690107
+      Value: 17.0242548053
     consumption[19]:
       Id: 19
-      Value: 0.241045816721
+      Value: 17.5349677217
     consumption[20]:
       Id: 20
-      Value: 0.240744320915
+      Value: 18.0609961017
     consumption[21]:
       Id: 21
-      Value: 0.240443202219
+      Value: 18.6027995311
     consumption[22]:
       Id: 22
-      Value: 0.240142460161
+      Value: 19.1608571992
     consumption[23]:
       Id: 23
-      Value: 0.239842094273
+      Value: 19.7356697996
     consumption[24]:
       Id: 24
-      Value: 0.239542104086
+      Value: 20.3277553565
     consumption[25]:
       Id: 25
-      Value: 0.239242489134
+      Value: 20.9376392964
     consumption[26]:
       Id: 26
-      Value: 0.238943248957
+      Value: 21.5658451214
     consumption[27]:
       Id: 27
-      Value: 0.238644383097
+      Value: 22.2128937925
     consumption[28]:
       Id: 28
-      Value: 0.238345891116
+      Value: 22.8793138409
     consumption[29]:
       Id: 29
-      Value: 0.238047772615
+      Value: 23.5656566353
     consumption[30]:
       Id: 30
-      Value: 0.237750027359
+      Value: 24.2725141557
     consumption[31]:
       Id: 31
-      Value: 0.237452656246
+      Value: 25.0005596516
     consumption[32]:
       Id: 32
-      Value: 0.242307695632
+      Value: 25.7506316523
     consumption[33]:
       Id: 33
-      Value: 0.257692307283
+      Value: 26.5236620922
     consumption[34]:
       Id: 34
-      Value: 0.273076922593
+      Value: 27.32015374
     consumption[35]:
       Id: 35
-      Value: 0.288461537894
+      Value: 28.139927944
     consumption[36]:
       Id: 36
-      Value: 0.303846150684
+      Value: 28.9830157174
     consumption[37]:
       Id: 37
-      Value: 0.313418802137
+      Value: 29.8499313253
     consumption[38]:
       Id: 38
-      Value: 0.313026797628
+      Value: 30.7505774549
     consumption[39]:
       Id: 39
-      Value: 0.312635272343
+      Value: 31.6691193067
     consumption[40]:
       Id: 40
-      Value: 0.312244235044
+      Value: 32.6206342927
     consumption[41]:
       Id: 41
-      Value: 0.31185368627
+      Value: 33.1948357748
     consumption[42]:
       Id: 42
-      Value: 0.311463625725
+      Value: 33.3452674607
     consumption[43]:
       Id: 43
-      Value: 0.31107405292
+      Value: 33.3705211219
     consumption[44]:
       Id: 44
-      Value: 0.3106849673
+      Value: 33.3576723838
     consumption[45]:
       Id: 45
-      Value: 0.310296368286
+      Value: 33.3308559122
     consumption[46]:
       Id: 46
-      Value: 0.309908255286
+      Value: 33.2979073085
     consumption[47]:
       Id: 47
-      Value: 0.309520627705
+      Value: 33.2618561496
     consumption[48]:
       Id: 48
-      Value: 0.309133484941
+      Value: 33.2240615158
     consumption[49]:
       Id: 49
-      Value: 0.308746826394
+      Value: 33.1852082102
     consumption[50]:
       Id: 50
-      Value: 0.308360651461
+      Value: 33.1456735441
     consumption[51]:
       Id: 51
-      Value: 0.30797495954
+      Value: 33.1056805779
     consumption[52]:
       Id: 52
-      Value: 0.307589750028
+      Value: 33.0653690761
     consumption[53]:
       Id: 53
-      Value: 0.307205022325
+      Value: 33.024831167
     consumption[54]:
       Id: 54
-      Value: 0.306820775827
+      Value: 32.9841304756
     consumption[55]:
       Id: 55
-      Value: 0.306437009935
+      Value: 32.9433129489
     consumption[56]:
       Id: 56
-      Value: 0.306053724048
+      Value: 32.9024132509
     consumption[57]:
       Id: 57
-      Value: 0.305670917566
+      Value: 32.8614586672
     consumption[58]:
       Id: 58
-      Value: 0.30528858989
+      Value: 32.8204715336
     consumption[59]:
       Id: 59
-      Value: 0.304906740421
+      Value: 32.7794707406
     consumption[60]:
       Id: 60
-      Value: 0.304525368563
+      Value: 32.7384726339
     consumption[61]:
       Id: 61
-      Value: 0.304144473717
+      Value: 32.6974915091
     consumption[62]:
       Id: 62
-      Value: 0.303764055289
+      Value: 32.6565398429
     consumption[63]:
       Id: 63
-      Value: 0.303384112682
+      Value: 32.6156283696
     consumption[64]:
       Id: 64
-      Value: 0.303004645301
+      Value: 32.5747660874
     consumption[65]:
       Id: 65
-      Value: 0.302625652552
+      Value: 32.5339602584
     consumption[66]:
       Id: 66
-      Value: 0.302247133844
+      Value: 32.4932141223
     consumption[67]:
       Id: 67
-      Value: 0.301869088585
+      Value: 32.4525304649
     consumption[68]:
       Id: 68
-      Value: 0.301491516183
+      Value: 32.4119114357
     consumption[69]:
       Id: 69
-      Value: 0.301114416047
+      Value: 32.3713585625
     consumption[70]:
       Id: 70
-      Value: 0.300737787586
+      Value: 32.3308727902
     consumption[71]:
       Id: 71
-      Value: 0.300361630211
+      Value: 32.2904545331
     consumption[72]:
       Id: 72
-      Value: 0.299985943332
+      Value: 32.2501037381
     consumption[73]:
       Id: 73
-      Value: 0.299610726362
+      Value: 32.2098199508
     consumption[74]:
       Id: 74
-      Value: 0.299235978706
+      Value: 32.169602384
     consumption[75]:
       Id: 75
-      Value: 0.29886169977
+      Value: 32.1294499854
     consumption[76]:
       Id: 76
-      Value: 0.298487888951
+      Value: 32.0893615037
     consumption[77]:
       Id: 77
-      Value: 0.298114545638
+      Value: 32.0493355509
     consumption[78]:
       Id: 78
-      Value: 0.297741669222
+      Value: 32.00937066
     consumption[79]:
       Id: 79
-      Value: 0.297369259164
+      Value: 31.9694653374
     consumption[80]:
       Id: 80
-      Value: 0.296997315215
+      Value: 31.9296181077
     consumption[81]:
       Id: 81
-      Value: 0.296625837722
+      Value: 31.8898275511
     consumption[82]:
       Id: 82
-      Value: 0.296254826608
+      Value: 31.8500923325
     consumption[83]:
       Id: 83
-      Value: 0.295884273673
+      Value: 31.810411222
     consumption[84]:
       Id: 84
-      Value: 0.295514140614
+      Value: 31.7707831073
     consumption[85]:
       Id: 85
-      Value: 0.295144330411
+      Value: 31.7312069983
     consumption[86]:
       Id: 86
-      Value: 0.294774695823
+      Value: 31.6916820253
     consumption[87]:
       Id: 87
-      Value: 0.294405134211
+      Value: 31.6522074315
     consumption[88]:
       Id: 88
-      Value: 0.294035734303
+      Value: 31.6127825605
     consumption[89]:
       Id: 89
-      Value: 0.293666832906
+      Value: 31.5734068433
     consumption[90]:
       Id: 90
-      Value: 0.29329886865
+      Value: 31.5340797869
     consumption[91]:
       Id: 91
-      Value: 0.292932109211
+      Value: 31.4948009746
     consumption[92]:
       Id: 92
-      Value: 0.292566477209
+      Value: 31.4555701007
     consumption[93]:
       Id: 93
-      Value: 0.292201622348
+      Value: 31.4163870928
     consumption[94]:
       Id: 94
-      Value: 0.291837160479
+      Value: 31.3772524639
     consumption[95]:
       Id: 95
-      Value: 0.291472871358
+      Value: 31.3381682975
     consumption[96]:
       Id: 96
-      Value: 0.291108731697
+      Value: 31.2991411378
     consumption[97]:
       Id: 97
-      Value: 0.290744827172
+      Value: 31.2601914523
     consumption[98]:
       Id: 98
-      Value: 0.290381255436
+      Value: 31.2213906061
     consumption[99]:
       Id: 99
-      Value: 0.290018080233
+      Value: 31.18303532
     consumption[100]:
       Id: 100
-      Value: 0.289655322359
+      Value: 31.1436885018
     assets[1]:
       Id: 102
-      Value: -0.246846518987
+      Value: 0.000128939548007
     assets[2]:
       Id: 103
-      Value: -0.490341997301
+      Value: 8.86822391084e-05
     assets[3]:
       Id: 104
-      Value: -0.730319269091
+      Value: 6.26960550452e-05
     assets[4]:
       Id: 105
-      Value: -0.966602809728
+      Value: 2.29371743291e-05
     assets[5]:
       Id: 106
-      Value: -1.19900831787
+      Value: 4.79792610897e-05
     assets[6]:
       Id: 107
-      Value: -1.42734227662
+      Value: 0.000119298236313
     assets[7]:
       Id: 108
-      Value: -1.65140149277
+      Value: 0.000194819302718
     assets[8]:
       Id: 109
-      Value: -1.87097261296
+      Value: 0.000221372853285
     assets[9]:
       Id: 110
-      Value: -2.08583161568
+      Value: 0.000190594656772
     assets[10]:
       Id: 111
-      Value: -2.29574327787
+      Value: 0.000141905235911
     assets[11]:
       Id: 112
-      Value: -2.50046061484
+      Value: 0.000110375375126
     assets[12]:
       Id: 113
-      Value: -2.69972429218
+      Value: 0.000101014536693
     assets[13]:
       Id: 114
-      Value: -2.89326200829
+      Value: 0.000107566210627
     assets[14]:
       Id: 115
-      Value: -3.08078784601
+      Value: 0.000128042001063
     assets[15]:
       Id: 116
-      Value: -3.26200159184
+      Value: 0.000162729965188
     assets[16]:
       Id: 117
-      Value: -3.43658802114
+      Value: 0.000211346118587
     assets[17]:
       Id: 118
-      Value: -3.60421614755
+      Value: 0.000273616527829
     assets[18]:
       Id: 119
-      Value: -3.76453843494
+      Value: 0.00035019629847
     assets[19]:
       Id: 120
-      Value: -3.91718996987
+      Value: 0.000443513175794
     assets[20]:
       Id: 121
-      Value: -4.06178759277
+      Value: 0.000558497868822
     assets[21]:
       Id: 122
-      Value: -4.19792898564
+      Value: 0.000702667711957
     assets[22]:
       Id: 123
-      Value: -4.32519171406
+      Value: 0.000883987055828
     assets[23]:
       Id: 124
-      Value: -4.44313222146
+      Value: 0.00110507578191
     assets[24]:
       Id: 125
-      Value: -4.55128477296
+      Value: 0.00135564125692
     assets[25]:
       Id: 126
-      Value: -4.64916034647
+      Value: 0.00160913143837
     assets[26]:
       Id: 127
-      Value: -4.73624546831
+      Value: 0.00182958812358
     assets[27]:
       Id: 128
-      Value: -4.81200099068
+      Value: 0.00198862153335
     assets[28]:
       Id: 129
-      Value: -4.87586080793
+      Value: 0.002084315838
     assets[29]:
       Id: 130
-      Value: -4.92723050867
+      Value: 0.00215144815071
     assets[30]:
       Id: 131
-      Value: -4.96548596057
+      Value: 0.00225744536683
     assets[31]:
       Id: 132
-      Value: -4.98997182441
+      Value: 0.00248087379847
     assets[32]:
       Id: 133
-      Value: -4.99999999496
+      Value: 0.0028487191465
     assets[33]:
       Id: 134
-      Value: -4.99999999803
+      Value: 0.00318705968782
     assets[34]:
       Id: 135
-      Value: -4.99999999752
+      Value: 0.00303670403571
     assets[35]:
       Id: 136
-      Value: -4.99999999692
+      Value: 0.00208775432989
     assets[36]:
       Id: 137
-      Value: -4.99999999619
+      Value: 0.000888741801936
     assets[37]:
       Id: 138
-      Value: -4.99999999284
+      Value: 0.000700741557148
     assets[38]:
       Id: 139
-      Value: -4.99418802539
+      Value: 0.00307123175027
     assets[39]:
       Id: 140
-      Value: -4.97230883967
+      Value: 0.000482120205432
     assets[40]:
       Id: 141
-      Value: -4.933559554
+      Value: 0.00165674477075
     assets[41]:
       Id: 142
-      Value: -4.87709715136
+      Value: 0.00148320931993
     assets[42]:
       Id: 143
-      Value: -4.80203646443
+      Value: 0.405710852601
     assets[43]:
       Id: 144
-      Value: -4.70744806722
+      Value: 1.68768786987
     assets[44]:
       Id: 145
-      Value: -4.59235606196
+      Value: 4.04671884485
     assets[45]:
       Id: 146
-      Value: -4.45573575544
+      Value: 7.60590513778
     assets[46]:
       Id: 147
-      Value: -4.29651121919
+      Value: 12.4713028989
     assets[47]:
       Id: 148
-      Value: -4.11355272774
+      Value: 18.7473979044
     assets[48]:
       Id: 149
-      Value: -3.90567406875
+      Value: 26.5418619342
     assets[49]:
       Id: 150
-      Value: -3.67162971867
+      Value: 35.9674123077
     assets[50]:
       Id: 151
-      Value: -3.41011187715
+      Value: 47.1427690693
     assets[51]:
       Id: 152
-      Value: -3.11974735324
+      Value: 60.1932941657
     assets[52]:
       Id: 153
-      Value: -2.79909429583
+      Value: 75.2515102888
     assets[53]:
       Id: 154
-      Value: -2.44663876065
+      Value: 92.4575756796
     assets[54]:
       Id: 155
-      Value: -2.06079110562
+      Value: 111.959748018
     assets[55]:
       Id: 156
-      Value: -1.63988220596
+      Value: 133.914853405
     assets[56]:
       Id: 157
-      Value: -1.18215948004
+      Value: 158.488769043
     assets[57]:
       Id: 158
-      Value: -0.685782716548
+      Value: 185.856924739
     assets[58]:
       Id: 159
-      Value: -0.148819693019
+      Value: 216.204826717
     assets[59]:
       Id: 160
-      Value: 0.430758424748
+      Value: 249.728606361
     assets[60]:
       Id: 161
-      Value: 1.05508191326
+      Value: 286.635596075
     assets[61]:
       Id: 162
-      Value: 1.72638756343
+      Value: 327.144934285
     assets[62]:
       Id: 163
-      Value: 2.44702400635
+      Value: 371.488201462
     assets[63]:
       Id: 164
-      Value: 3.21945730522
+      Value: 419.910089023
     assets[64]:
       Id: 165
-      Value: 4.04627682703
+      Value: 472.669102955
     assets[65]:
       Id: 166
-      Value: 4.9302014077
+      Value: 530.038304002
     assets[66]:
       Id: 167
-      Value: 4.87408582553
+      Value: 524.006258943
     assets[67]:
       Id: 168
-      Value: 4.81554298297
+      Value: 517.713357768
     assets[68]:
       Id: 169
-      Value: 4.75445104353
+      Value: 511.146495192
     assets[69]:
       Id: 170
-      Value: 4.69068207952
+      Value: 504.291908516
     assets[70]:
       Id: 171
-      Value: 4.62410176745
+      Value: 497.135145379
     assets[71]:
       Id: 172
-      Value: 4.55456906824
+      Value: 489.661029858
     assets[72]:
       Id: 173
-      Value: 4.48193589144
+      Value: 481.853626817
     assets[73]:
       Id: 174
-      Value: 4.40604674268
+      Value: 473.69620442
     assets[74]:
       Id: 175
-      Value: 4.32673835345
+      Value: 465.17119469
     assets[75]:
       Id: 176
-      Value: 4.24383929242
+      Value: 456.260152041
     assets[76]:
       Id: 177
-      Value: 4.15716955727
+      Value: 446.943709657
     assets[77]:
       Id: 178
-      Value: 4.06654014618
+      Value: 437.201533636
     assets[78]:
       Id: 179
-      Value: 3.97175260785
+      Value: 427.012274767
     assets[79]:
       Id: 180
-      Value: 3.87259856902
+      Value: 416.353517846
     assets[80]:
       Id: 181
-      Value: 3.76885923831
+      Value: 405.2017284
     assets[81]:
       Id: 182
-      Value: 3.66030488501
+      Value: 393.532196713
     assets[82]:
       Id: 183
-      Value: 3.54669429154
+      Value: 381.318978997
     assets[83]:
       Id: 184
-      Value: 3.42777417951
+      Value: 368.534835615
     assets[84]:
       Id: 185
-      Value: 3.30327861481
+      Value: 355.151166173
     assets[85]:
       Id: 186
-      Value: 3.17292840494
+      Value: 341.137941375
     assets[86]:
       Id: 187
-      Value: 3.03643049477
+      Value: 326.463631445
     assets[87]:
       Id: 188
-      Value: 2.89347732369
+      Value: 311.095130992
     assets[88]:
       Id: 189
-      Value: 2.74374605566
+      Value: 294.99768011
     assets[89]:
       Id: 190
-      Value: 2.58689762414
+      Value: 278.134781555
     assets[90]:
       Id: 191
-      Value: 2.42257567244
+      Value: 260.46811379
     assets[91]:
       Id: 192
-      Value: 2.25040558742
+      Value: 241.957439692
     assets[92]:
       Id: 193
-      Value: 2.06999375758
+      Value: 222.560510703
     assets[93]:
       Id: 194
-      Value: 1.88092696825
+      Value: 202.232966137
     assets[94]:
       Id: 195
-      Value: 1.68277169431
+      Value: 180.928227351
     assets[95]:
       Id: 196
-      Value: 1.47507311855
+      Value: 158.597386255
     assets[96]:
       Id: 197
-      Value: 1.25735390312
+      Value: 135.18908727
     assets[97]:
       Id: 198
-      Value: 1.02911286657
+      Value: 110.649400495
     assets[98]:
       Id: 199
-      Value: 0.789823682731
+      Value: 84.9216790679
     assets[99]:
       Id: 200
-      Value: 0.538933611432
+      Value: 57.9463724152
     assets[100]:
       Id: 201
-      Value: 0.27586221177
+      Value: 29.660655716
   Constraint: No nonzero values

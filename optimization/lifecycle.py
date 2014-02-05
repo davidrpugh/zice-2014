@@ -18,14 +18,14 @@ model.r = pyomo.Param(doc='interest rate', within=pyomo.NonNegativeReals)
 
 # wages
 def wage_schedule(model, t):
-    """Defines the path of wages. This should really go in the .dat file?"""
+    """Defines the path of wages. This should really go in the .dat file!"""
     if t < model.R:
-        wage = t / model.R
+        wage = 1.03**t * 10.0
     else:
         wage = 0.0
     return wage
 
-model.w = pyomo.Param(model.periods, doc='Real wages', within=pyomo.NonNegativeReals,
+model.w = pyomo.Param(model.periods, doc='real wages', within=pyomo.NonNegativeReals,
                       initialize=wage_schedule)
 
 # define utilty parameters
@@ -42,8 +42,11 @@ model.minimum_assets = pyomo.Param(doc='lower bound on assets.')
 def initial_consumption(model, t):
     """Rule for initial choice of consumption."""
     return 0.5
-
-model.consumption = pyomo.Var(model.periods, domain=pyomo.PositiveReals, 
+    
+model.consumption = pyomo.Var(model.periods, 
+                              name='consumption', 
+                              doc="agent's consumption choice is a flow variable!", 
+                              domain=pyomo.PositiveReals, 
                               initialize=initial_consumption)
 
 # declare assets variable
@@ -52,17 +55,37 @@ def initial_assets(model, t):
     Rule for initializing assets. Ideally this should be feasible given 
     rules for initializing consumption variable.
     
-    """          
-    return 0.0
+    """
+    # extract variables
+    c = model.consumption
+    A = model.assets
+    
+    # extract parameters
+    T = model.T
+    w = model.w
+    r = model.r
+    
+    if t == 0 or t == (T + 1):
+        assets = 0.0
+    else:
+        assets = w[t-1] + (1 + r) * A[t-1] - c[t-1]
+        
+    return assets
 
-model.assets = pyomo.Var(pyomo.RangeSet(0, model.T+1), initialize=initial_assets)
+model.assets = pyomo.Var(pyomo.RangeSet(0, model.T+1), 
+                         name='assets', 
+                         doc='agent assets are a stock variable!',
+                         initialize=initial_assets)
 
 ##### define the objective function #####
 
 def flow_utility(model, c):
     """Flow utility function for the agent."""    
+    # extract parameters
+    theta = model.theta
+    
     # agent likes to eat...
-    utility_consumption = c**(1 - model.theta) / (1 - model.theta)
+    utility_consumption = c**(1 - theta) / (1 - theta)
             
     return utility_consumption
 
@@ -70,13 +93,18 @@ def lifetime_utility(model):
     """Abstract representation of our model objective.""" 
     # extract variables
     c = model.consumption
-        
+    
+    # extract parameters
+    beta = model.beta
+    T = model.periods
+    
     # compute utility
-    U = sum(model.beta**t * flow_utility(model, c[t]) for t in model.periods)
+    U = sum(beta**t * flow_utility(model, c[t]) for t in T)
     
     return U 
 
-model.lifetime_utility = pyomo.Objective(rule=lifetime_utility, sense=pyomo.maximize)
+model.lifetime_utility = pyomo.Objective(rule=lifetime_utility, 
+                                         sense=pyomo.maximize)
 
 ##### Define the model constraints #####
 
@@ -92,22 +120,28 @@ def flow_budget_constraints(model, t):
     
     return c[t] + A[t+1] == w[t] + (1 + r) * A[t]
     
-model.budget_constraints = pyomo.Constraint(model.periods, rule=flow_budget_constraints)
+model.budget_constraints = pyomo.Constraint(model.periods, 
+                                            rule=flow_budget_constraints,
+                                            doc='Agent faces a sequence of flow budget constraints.')
 
 def borrowing_constraint(model, t):
     """Agent's assets cannot fall below some minimum amount."""
     return model.assets[t] >= model.minimum_assets
 
-model.borrowing_constraint = pyomo.Constraint(model.periods, rule=borrowing_constraint)
+model.borrowing_constraint = pyomo.Constraint(model.periods, 
+                                              rule=borrowing_constraint,
+                                              doc='There is a lower bound on agent assets.')
 
 def endowment(model):
     """Agent has some initial assets."""
     return model.assets[0] == 0.0
 
-model.endowment = pyomo.Constraint(rule=endowment)
+model.endowment = pyomo.Constraint(rule=endowment, 
+                                   doc='Agent has some initial endowment.')
 
 def no_bequests(model):
     """Agent leaves no bequests."""
     return model.assets[model.T+1] == 0.0
 
-model.no_bequests = pyomo.Constraint(rule=no_bequests)
+model.no_bequests = pyomo.Constraint(rule=no_bequests,
+                                     doc='Agent makes no bequests.')

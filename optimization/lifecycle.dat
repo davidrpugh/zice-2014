@@ -15,4 +15,4 @@ param theta := 2.0 ;
 param r := 0.05 ;
 
 # lower bound on asset holdings
-param minimum_assets := -5.0 ;
+param minimum_assets := -10.0 ;
